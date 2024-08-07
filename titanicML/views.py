@@ -6,4 +6,6 @@ def home(request):
 
 
 def result(request):
-    return render(request, 'results.html')
+    user_input_age = request.GET['age']
+    user_input_age += ' take the chance'
+    return render(request, 'results.html', {'age': user_input_age})

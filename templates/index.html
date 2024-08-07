@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TitanicML</title>
-</head>
-<body>
-    <h1>this is running as intended</h1>
-</body>
+  </head>
+  <body>
+    <h1>Home Page</h1>
+    <h3>Get your Titanic Prediction here</h3>
+    <p>Enter in the details of a made up person on the Titanic</p>
+    <p>We will output a prediction!</p>
+
+    <form action="{% url 'result' %}" method="get">
+      {% csrf_token %}
+      <!-- <label for="age">Age:</label> -->
+      <input type="text" id="age" name="age" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
