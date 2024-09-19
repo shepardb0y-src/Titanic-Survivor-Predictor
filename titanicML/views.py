@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . import fake_model
+from . import ml_predict
 
 
 def home(request):
@@ -7,6 +7,6 @@ def home(request):
 
 
 def result(request):
-    user_input_age = request.GET['age']
-    prediction = fake_model.fake_predict(user_input_age)
+    age = int(request.GET['age'])
+    prediction = ml_predict.prediction_nodel()
     return render(request, 'results.html', {'prediction': prediction})

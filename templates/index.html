@@ -13,7 +13,22 @@
 
     <form action="{% url 'result' %}" method="get">
       {% csrf_token %}
-      <!-- <label for="age">Age:</label> -->
+
+      <p>Pclass</p>
+      <input type="text" id="pclass" name="pclass" />
+      <p>Sex</p>
+      <input type="text" id="sex" name="sex" />
+      <p>Sibsp</p>
+      <input type="text" id="sibsp" name="sibsp" />
+      <p>Parch</p>
+      <input type="text" id="parch" name="parch" />
+      <p>Fare</p>
+      <input type="text" id="fare" name="fare " />
+      <p>Title</p>
+      <input type="text" id="title" name="title" />
+      <p>embarked</p>
+      <input type="text" id="embarked" name="embarked" />
+      <p>Age</p>
       <input type="text" id="age" name="age" />
       <input type="submit" value="Submit" />
     </form>
