@@ -15,5 +15,5 @@ def result(request):
     fare = int(request.GET['fare'])
     embarked = int(request.GET['embarked'])
     title = int(request.GET['title'])
-    prediction = ml_predict.prediction_nodel()
+    prediction = ml_predict.prediction_model()
     return render(request, 'results.html', {'prediction': prediction})
