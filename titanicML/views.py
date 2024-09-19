@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . import fake_model
 
 
 def home(request):
@@ -7,5 +8,5 @@ def home(request):
 
 def result(request):
     user_input_age = request.GET['age']
-    user_input_age += ' take the chance'
-    return render(request, 'results.html', {'age': user_input_age})
+    prediction = fake_model.fake_predict(user_input_age)
+    return render(request, 'results.html', {'prediction': prediction})
