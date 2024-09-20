@@ -15,5 +15,6 @@ def result(request):
     fare = int(request.GET['fare'])
     embarked = int(request.GET['embarked'])
     title = int(request.GET['title'])
-    prediction = ml_predict.prediction_model()
+    prediction = ml_predict.prediction_model(
+        pclass, sex, age, sibsp, parch, fare, embarked, title)
     return render(request, 'results.html', {'prediction': prediction})
