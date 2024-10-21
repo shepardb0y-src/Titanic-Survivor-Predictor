@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TitanicML</title>
+  </head>
+  <body>
+    <h1>Home Page</h1>
+    <h3>Get your Titanic Prediction here</h3>
+    <p>Enter in the details of a made up person on the Titanic</p>
+    <p>We will output a prediction!</p>
+
+    <form action="{% url 'result' %}" method="get">
+      {% csrf_token %}
+      <p>Pclass</p>
+      <input type="text" id="pclass" name="pclass" />
+      <p>Sex</p>
+      <input type="text" id="sex" name="sex" />
+      <p>Age</p>
+      <input type="text" id="age" name="age" />
+      <p>Sibsp</p>
+      <input type="text" id="sibsp" name="sibsp" />
+      <p>Parch</p>
+      <input type="text" id="parch" name="parch" />
+      <p>Fare</p>
+      <input type="text" id="fare" name="fare" />
+      <p>Title</p>
+      <input type="text" id="title" name="title" />
+      <p>embarked</p>
+      <input type="text" id="embarked" name="embarked" />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
